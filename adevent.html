@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>train vitesse</title>
+  <link rel="stylesheet" href="train.css">
+  <!-- <script src="script.js">
+
+  </script> -->
+</head>
+<body>
+  <div class="container">
+    <div class="rail">
+<div class="train">
+
+    <div id="rouge"></div>
+    <div id="jaune"><div class="fbleu">
+    </div>
+    </div>
+    <div class="motor">
+      <div class="roue"><div class="disque">
+
+      </div>
+    </div>
+        <div class="roue">
+        <div class="disque">
+        </div>
+        </div>
+        <div class="roue"><div class="disque">
+        </div>
+      </div>
+        </div>
+<!-- <div class="bleu"></div> -->
+    <div class="vert"></div>
+
+      </div>
+<!-- <div class="carre">
+
+</div> -->
+    </div>
+    </div>
+    <!-- <div id="carre">
+
+    </div> -->
+<h1 id="mstop">stop !</h1>
+<!-- <h2 onclick="stop()">arrete</h2> -->
+<script type="text/javascript">
+
+var stop= document.getElementById('mstop');
+// declaration de la function qui deplace le train
+  function deplace(){
+  var avance = true;//variable booleenne qui indique l'etat du train
+  var elem = document.getElementsByClassName("train");
+  var pos = 5;
+  var i = 1/100000;
+  var id = setInterval(frame, i);
+  console.log(elem[0].offsetLeft);
+
+   function frame() {
+     if(avance){
+    stop.addEventListener('click', function(){
+      clearInterval(id);
+      if(elem[0].offsetLeft < 1138){
+    alert('bravo vous n \'avez pas touché le bord votre position est:'+ elem[0].offsetLeft);
+  }else{
+    alert('trop tard vous avez touché le bord!');
+  }
+  });
+  avance = false;
+  // on recupere la position au stop dans pos
+  pos= elem[0].offsetLeft;
+
+
+  }else {
+      pos++;
+      // elem.style.top = pos + 'px';
+      elem[0].style.left = pos + 'px';
+    }
+  }
+
+};
+var element = document.getElementById("jaune");
+element.addEventListener('click', deplace);
+
+</script>
+
+</body>
+</html>

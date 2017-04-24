@@ -34,10 +34,10 @@ background: rgb(201, 159, 8);
   float: left;
   width: 25px;
   height: 25px;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-left: 60px;
   background: rgb(213, 75, 32);
-  border-radius: 100%
+  border-radius: 10%
 }
 .bouche{
   float: left;
@@ -46,6 +46,13 @@ background: rgb(201, 159, 8);
   background: rgb(232, 206, 34);
   width: 40px;
   height: 15px
+}
+p{
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  background: rgb(199, 219, 132);
+  align-content: center;
 }
 .cou{
   float: left;
